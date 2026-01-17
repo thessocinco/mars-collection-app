@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    tools:context=".CustomerDetails.CustDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/maintoolbar" />
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:scrollbars="none"
+            tools:ignore="NestedScrolling">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:isScrollContainer="true"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbars="vertical"
+                android:stretchColumns="1"
+                tools:ignore="ScrollViewSize">
+
+                <!-- Customer Name -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:hint="Customer Name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/custName"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:inputType="none"
+                        android:padding="8dp"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Customer ID -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:hint="Customer ID"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/custID"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:padding="8dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Customer Type -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:hint="Customer Type"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/custType"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:padding="8dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Sub Pocket -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:hint="Sub Pocket"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/custSubPocket"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:padding="8dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Street -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:hint="Street"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/custStreet"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:padding="8dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Barangay -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:hint="Barangay"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/custBarangay"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:padding="8dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- City/Town -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:hint="City/Town"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/custCityTown"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:padding="8dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Province -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:hint="Province"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/custProvince"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:padding="8dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:columnCount="2"
+                    app:orientation="horizontal">
+
+                    <!-- Latitude: 2/3 width -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:hint="Latitude"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:layout_columnWeight="2">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/custLatitude"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:inputType="none"
+                            android:singleLine="true"
+                            android:padding="8dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Longitude: 2/3 width -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:hint="Longitude"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:layout_columnWeight="2">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/custLongitude"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:inputType="none"
+                            android:singleLine="true"
+                            android:padding="8dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.gridlayout.widget.GridLayout>
+
+                <!-- Contact Person -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:hint="Contact Person"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/custContactPerson"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:padding="8dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Owner Name -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:hint="Owner Name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/custOwnerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:padding="8dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:columnCount="2"
+                    app:orientation="horizontal">
+
+                    <!-- Cellphone Number: 2/3 width -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:hint="Cellphone Number"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:layout_columnWeight="3">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/custCellNum"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:inputType="none"
+                            android:singleLine="true"
+                            android:padding="8dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Birthday: 2/3 width -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:hint="Birthday"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:layout_columnWeight="2">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/custBirthday"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:inputType="none"
+                            android:singleLine="true"
+                            android:padding="8dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.gridlayout.widget.GridLayout>
+
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

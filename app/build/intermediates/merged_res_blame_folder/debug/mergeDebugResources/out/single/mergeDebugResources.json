@@ -1,0 +1,242 @@
+[
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.marsIT.collection_app-main-47:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.marsIT.collection_app-main-47:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_customer_list_collection.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/customer_list_collection.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.marsIT.collection_app-main-47:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_customer_details.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/customer_details.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_data_goodest.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/data_goodest.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.marsIT.collection_app-main-47:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.marsIT.collection_app-main-47:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.marsIT.collection_app-main-47:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_data_solane.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/data_solane.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_row_deduction_n.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/row_deduction_n.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.marsIT.collection_app-main-47:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_data_lamoiyan.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/data_lamoiyan.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_data_cc1.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/data_cc1.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.marsIT.collection_app-main-47:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_data_urc.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/data_urc.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.marsIT.collection_app-pngs-41:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_data_kohl.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/data_kohl.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/drawable_amt_outline.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/drawable/amt_outline.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_data_agrichem.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/data_agrichem.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_data_zestar.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/data_zestar.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/menu_kebabmenu.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/menu/kebabmenu.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_maintoolbar.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/maintoolbar.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/drawable_button_hover.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/drawable/button_hover.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_row_payment.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/row_payment.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/drawable_column_border.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/drawable/column_border.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_data_cc2.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/data_cc2.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_mainlayout.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/mainlayout.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.marsIT.collection_app-main-47:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.marsIT.collection_app-main-47:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/drawable_textview_outline.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/drawable/textview_outline.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/drawable_header_border.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/drawable/header_border.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_collection_payment.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/collection_payment.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_data_belo.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/data_belo.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.marsIT.collection_app-main-47:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/drawable_button_bg.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/drawable/button_bg.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_data_lubs.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/data_lubs.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_row_deduction.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/row_deduction.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_data_peerless.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/data_peerless.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_collection_view_transaction.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/collection_view_transaction.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.marsIT.collection_app-main-47:/mipmap-hdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_row_invoice_n.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/row_invoice_n.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_install_progress.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/install_progress.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.marsIT.collection_app-main-47:/mipmap-mdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_send_reason.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/send_reason.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.marsIT.collection_app-main-47:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/xml_data_extraction_rules.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/drawable_status_circle.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/drawable/status_circle.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/xml_backup_rules.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_data_columbia.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/data_columbia.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_row_payment_n.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/row_payment_n.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_row_invoice.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/row_invoice.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.marsIT.collection_app-main-47:/mipmap-xhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_data_eq.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/data_eq.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_collection_startup.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/collection_startup.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_customer_status_item.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/customer_status_item.xml"
+    },
+    {
+        "merged": "com.marsIT.collection_app-debug-45:/layout_data_montosco.xml.flat",
+        "source": "com.marsIT.collection_app-main-47:/layout/data_montosco.xml"
+    }
+]

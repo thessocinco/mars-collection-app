@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.marsIT.collection_app"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="23"
+        android:targetSdkVersion="36" />
+
+    <!-- Permissions Start -->
+    <!-- Precise Location (ACCESS_FINE_LOCATION) -->
+    <!--
+        * For GPS (Global Positioning System)
+          * Wi-Fi
+          * Cellular networks
+          * Bluetooth (for Android 8.0 and higher)
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!--
+        * For Wi-Fi
+          * Cell tower signals
+          * Other network-based methods (like IP address)
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <!-- Telephony Permissions -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <!-- This ensures that the app only installs on devices with GPS and SMS capabilities -->
+    <!-- Telephony Hardware Feature to enable all the Telephony Permission -->
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+    <!-- <uses-sdk android:minSdkVersion="21"/> -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <permission
+        android:name="com.marsIT.collection_app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.marsIT.collection_app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Permissions End -->
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_foreground"
+        android:label="@string/AppName"
+        android:roundIcon="@mipmap/ic_launcher_foreground"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.MarsCollectionApp" >
+
+        <!-- ======================= SMS RECEIVER ADDED HERE ======================= -->
+        <receiver
+            android:name="com.marsIT.collection_app.ReceiverSMS.SMSDataReceiver"
+            android:exported="true"
+            android:permission="android.permission.BROADCAST_SMS" >
+            <intent-filter android:priority="99999" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <!-- ======================= END SMS RECEIVER ======================= -->
+
+
+        <!-- StartUp should be the launcher -->
+        <activity
+            android:name="com.marsIT.collection_app.CollectionStartUp.StartUp"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MainActivity -->
+        <activity
+            android:name="com.marsIT.collection_app.MainProgram.MainActivity"
+            android:exported="true" />
+
+        <!-- <activity android:name=".InstallProgress.InstallationProcess" -->
+        <!-- android:exported="true" /> -->
+
+
+        <!-- CollectionData -->
+        <activity
+            android:name="com.marsIT.collection_app.CollectionData.CollectionPayment"
+            android:exported="true" />
+        <activity
+            android:name="com.marsIT.collection_app.CollectionData.ViewCollection"
+            android:exported="true" />
+        <!-- CollectionData -->
+
+
+        <!-- CustomerDetails -->
+        <activity
+            android:name="com.marsIT.collection_app.CustomerDetails.CustDetails"
+            android:exported="true" />
+        <!-- CustomerDetails -->
+
+
+        <!-- CustomerStatus -->
+        <activity
+            android:name="com.marsIT.collection_app.CustomerStatus.CustomerListCollection"
+            android:exported="true" />
+        <!-- CustomerStatus -->
+
+
+        <!-- SQLpackages -->
+        <activity
+            android:name="com.marsIT.collection_app.UpdateSQLpackages.AgriChemData"
+            android:exported="true" />
+        <activity
+            android:name="com.marsIT.collection_app.UpdateSQLpackages.BeloData"
+            android:exported="true" />
+        <activity
+            android:name="com.marsIT.collection_app.UpdateSQLpackages.Century1Data"
+            android:exported="true" />
+        <activity
+            android:name="com.marsIT.collection_app.UpdateSQLpackages.Century2Data"
+            android:exported="true" />
+        <activity
+            android:name="com.marsIT.collection_app.UpdateSQLpackages.ColumbiaData"
+            android:exported="true" />
+        <activity
+            android:name="com.marsIT.collection_app.UpdateSQLpackages.EqData"
+            android:exported="true" />
+        <activity
+            android:name="com.marsIT.collection_app.UpdateSQLpackages.KohlData"
+            android:exported="true" />
+        <activity
+            android:name="com.marsIT.collection_app.UpdateSQLpackages.LamoiyanData"
+            android:exported="true" />
+        <activity
+            android:name="com.marsIT.collection_app.UpdateSQLpackages.LubricantsData"
+            android:exported="true" />
+        <activity
+            android:name="com.marsIT.collection_app.UpdateSQLpackages.MontoscoData"
+            android:exported="true" />
+        <activity
+            android:name="com.marsIT.collection_app.UpdateSQLpackages.PeerlessData"
+            android:exported="true" />
+        <activity
+            android:name="com.marsIT.collection_app.UpdateSQLpackages.RamData"
+            android:exported="true" />
+        <activity
+            android:name="com.marsIT.collection_app.UpdateSQLpackages.SolaneData"
+            android:exported="true" />
+        <activity
+            android:name="com.marsIT.collection_app.UpdateSQLpackages.UrcData"
+            android:exported="true" />
+        <activity
+            android:name="com.marsIT.collection_app.UpdateSQLpackages.ZestarData"
+            android:exported="true" />
+        <!-- SQLpackages -->
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:directBootAware="true"
+            android:exported="false" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.marsIT.collection_app.firebaseinitprovider"
+            android:directBootAware="true"
+            android:exported="false"
+            android:initOrder="100" />
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.marsIT.collection_app.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.DUMP" >
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

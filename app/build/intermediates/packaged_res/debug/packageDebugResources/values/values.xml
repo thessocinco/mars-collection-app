@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="salesmanlistarr">
+        <item>Salesman ID</item> 
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+    </string-array>
+    <string-array name="sellingtype">
+        <item>Booking</item>
+        <item>Van-selling</item>
+    </string-array>
+    <color name="accent_red_200">#FF8A80</color>
+    <color name="accent_red_700">#D32F2F</color>
+    <color name="black">#FF000000</color>
+    <color name="button_focused">#FF3333</color>
+    <color name="button_pressed">#CC0000</color>
+    <color name="dark_gray">#757575</color>
+    <color name="darker_shade">#424242</color>
+    <color name="gray">#BDBDBD</color>
+    <color name="main_color">#FE0000</color>
+    <color name="red_200">#FF8666</color>
+    <color name="red_500">#FE0000</color>
+    <color name="red_700">#C10000</color>
+    <color name="red_900">#800000</color>
+    <color name="slightly_gray">#979797</color>
+    <color name="ultra_dark_gray">#212121</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="AppName">MarsCAPP</string>
+    <style name="Base.Theme.MarsCollectionApp" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+                
+
+                <item name="colorPrimary">@color/red_500</item>
+                <item name="colorPrimaryVariant">@color/red_700</item>
+                <item name="colorOnPrimary">@color/white</item>
+
+                
+                <item name="colorSecondary">@color/accent_red_200</item>
+                <item name="colorSecondaryVariant">@color/accent_red_700</item>
+                <item name="colorOnSecondary">@color/black</item>
+
+                
+                <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+                
+    </style>
+    <style name="Theme.MarsCollectionApp" parent="Base.Theme.MarsCollectionApp"/>
+</resources>

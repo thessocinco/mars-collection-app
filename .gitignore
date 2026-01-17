@@ -1,0 +1,21 @@
+# Android Studio & Gradle files
+*.iml
+.gradle
+/local.properties
+/.idea/
+/build/
+/captures
+.externalNativeBuild/
+
+# Android debug & release APKs
+*.apk
+*.aab
+
+# Google Services configuration (optional)
+google-services.json
+
+# NDK / CMake output
+.cxx/
+
+# IntelliJ / JetBrains backup files
+*.log

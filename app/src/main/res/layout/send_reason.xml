@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    tools:context=".MainProgram.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/maintoolbar" />
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:scrollbars="none"
+            tools:ignore="NestedScrolling">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:isScrollContainer="true"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbars="vertical"
+                android:stretchColumns="1"
+                tools:ignore="ScrollViewSize">
+
+                <!-- Customer Code -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="CUSTOMER CODE"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/srCustomerCode"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_height="55dp"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:hint="Registered Customer Code"
+                    android:textSize="16sp"
+                    android:background="@drawable/textview_outline"/>
+
+                <!-- Customer Name -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="CUSTOMER CODE"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/srCustomerName"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_height="55dp"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:hint="Registered Customer Code"
+                    android:textSize="16sp"
+                    android:background="@drawable/textview_outline"/>
+
+                <!-- Select Reasons -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="REASON SELECTION"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:alignmentMode="alignMargins"
+                    app:columnCount="2">
+
+                    <!-- Wrap RadioButtons in a RadioGroup to ensure exclusivity -->
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/srIn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:text="IN"
+                            android:onClick="onRadioButtonClicked"
+                            tools:ignore="HardcodedText,UsingOnClickInXml" />
+
+                        <RadioButton
+                            android:id="@+id/srOut"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="OUT"
+                            android:onClick="onRadioButtonClicked"
+                            tools:ignore="HardcodedText,UsingOnClickInXml" />
+
+                        <RadioButton
+                            android:id="@+id/srOtherReason"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="OTHER REASON"
+                            android:onClick="onRadioButtonClicked"
+                            tools:ignore="HardcodedText,UsingOnClickInXml" />
+                    </RadioGroup>
+                </androidx.gridlayout.widget.GridLayout>
+
+                <!-- Select Customers -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:hint="Select Customers"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/srSelectReason"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Other Reason -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="OTHER REASON"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Specify Your Reason . . ."
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/srAddReason"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:padding="8dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Buttons -->
+                <Button
+                    android:id="@+id/btnSendReason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:textAlignment="center"
+                    android:text="Send Reason"
+                    android:background="@drawable/button_bg"
+                    android:textColor="@android:color/white"
+                    android:elevation="2dp"
+                    android:stateListAnimator="@null"
+                    android:padding="12dp"
+                    android:textSize="16sp"/>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

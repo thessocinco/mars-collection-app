@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    tools:context=".CollectionData.ViewCollection">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/maintoolbar" />
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:scrollbars="none"
+            tools:ignore="NestedScrolling">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:isScrollContainer="true"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbars="vertical"
+                android:stretchColumns="1"
+                tools:ignore="ScrollViewSize">
+
+                <!-- List of PR Number -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="QUERY PR NUMBER"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
+
+                <!-- Search PR Number -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:hint="Enter PR Number"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/vcSelectPRnumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:padding="8dp"
+                        android:focusable="true"
+                        android:cursorVisible="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Customer ID -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:hint="Customer ID"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/vcCustomerID"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:padding="8dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Customer Name -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:hint="Customer Name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/vcCustomerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:padding="8dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="SALESMAN DETAILS"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    app:columnCount="2"
+                    app:orientation="horizontal">
+
+                    <!-- Salesman Name: 2/3 width -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:hint="Salesman Name"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:layout_columnWeight="2">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/vcSalesmanName"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:inputType="none"
+                            android:singleLine="true"
+                            android:padding="8dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Department: 2/3 width -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:hint="Department"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:layout_columnWeight="2">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/vcDepartment"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:inputType="none"
+                            android:singleLine="true"
+                            android:padding="8dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.gridlayout.widget.GridLayout>
+
+                <!-- Syntax Date/Time -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:hint="Syntax Date/Time"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/vcSyntaxDateTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:padding="8dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- LIST OF INVOICES -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="LIST OF INVOICES"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="2dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!-- Invoice Number -->
+                        <TextView
+                            android:id="@+id/rvInvoiceNumber"
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:gravity="center"
+                            android:text="Invoice Number"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:background="@drawable/header_border"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/rvInvoiceAmount"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.4" />
+
+                        <!-- Invoice Amount -->
+                        <TextView
+                            android:id="@+id/rvInvoiceAmount"
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:text="Invoice Amount"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/header_border"
+                            app:layout_constraintStart_toEndOf="@id/rvInvoiceNumber"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/rvDepartment"
+                            app:layout_constraintWidth_percent="0.3"/>
+
+                        <!-- Department -->
+                        <TextView
+                            android:id="@+id/rvDepartment"
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/header_border"
+                            android:gravity="center"
+                            android:text="Department"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/rvInvoiceAmount"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.3" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/vcListOfInvoiceRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- Total Invoice Amount -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:background="@drawable/amt_outline">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Total Invoice Amount"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/vcTotalInvoiceAmount"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:gravity="end"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <!-- LIST OF CATEGORY -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="LIST OF CATEGORY"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="2dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!-- Category Header -->
+                        <TextView
+                            android:id="@+id/rvCategory"
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:text="Category"
+                            android:textColor="@android:color/white"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/header_border"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintWidth_percent="0.5"/>
+
+                        <!-- Amount Header -->
+                        <TextView
+                            android:id="@+id/rvCategoryAmount"
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:text="Amount"
+                            android:textColor="@android:color/white"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/header_border"
+                            app:layout_constraintStart_toEndOf="@id/rvCategory"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintWidth_percent="0.5"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/vcListOfDeductionRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0.8dp"
+                    android:layout_marginRight="0.8dp" />
+
+                <!-- Total Deduction Amount -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:background="@drawable/amt_outline">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Total Deduction Amount"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/vcTotalDeductionAmount"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:gravity="end"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <!-- LIST OF PAYMENTS -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="LIST OF PAYMENTS"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="2dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!-- Payment Type -->
+                        <TextView
+                            android:id="@+id/rvPType"
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:text="PType"
+                            android:textColor="@android:color/white"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/header_border"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintWidth_percent="0.25"/>
+
+                        <!-- Bank Initial -->
+                        <TextView
+                            android:id="@+id/rvBankInitial"
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:text="Bank Initial"
+                            android:textColor="@android:color/white"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/header_border"
+                            app:layout_constraintStart_toEndOf="@id/rvPType"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintWidth_percent="0.25"/>
+
+                        <!-- Check Number -->
+                        <TextView
+                            android:id="@+id/rvChkNumber"
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:text="Chk Number"
+                            android:textColor="@android:color/white"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/header_border"
+                            app:layout_constraintStart_toEndOf="@id/rvBankInitial"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintWidth_percent="0.25"/>
+
+                        <!-- Amount -->
+                        <TextView
+                            android:id="@+id/rvPaymentAmount"
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:text="Amount"
+                            android:textColor="@android:color/white"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/header_border"
+                            app:layout_constraintStart_toEndOf="@id/rvChkNumber"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintWidth_percent="0.25"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/vcListOfCollectionsRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0.8dp"
+                    android:layout_marginRight="0.8dp" />
+
+                <!-- Total Payment Amount -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:background="@drawable/amt_outline">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Total Payment Amount"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/vcTotalPaymentAmount"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:gravity="end"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <!-- View PR Number Button -->
+                <Button
+                    android:id="@+id/btnResendCollection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:textAlignment="center"
+                    android:text="RESEND COLLECTION"
+                    android:background="@drawable/button_bg"
+                    android:textColor="@android:color/white"
+                    android:elevation="2dp"
+                    android:stateListAnimator="@null"
+                    android:padding="12dp"
+                    android:textSize="16sp"/>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

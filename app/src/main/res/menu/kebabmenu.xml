@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Phone Settings -->
+    <item
+        android:id="@+id/action_phoneSettings"
+        android:orderInCategory="100"
+        android:title="Phone Settings"
+        app:showAsAction="never" />
+
+    <!-- Restart Application -->
+    <item
+        android:id="@+id/action_restart"
+        android:orderInCategory="100"
+        android:title="Restart"
+        app:showAsAction="never" />
+
+    <!-- Exit Application -->
+    <item
+        android:id="@+id/action_exit"
+        android:orderInCategory="100"
+        android:title="Exit"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red_200">#FF8666</color>   <!-- Light red -->
+    <color name="red_500">#FE0000</color>   <!-- Main red -->
+    <color name="red_700">#C10000</color>   <!-- Darker red -->
+    <color name="red_900">#800000</color>   <!-- Deep red / Maroon -->
+
+    <color name="accent_red_200">#FF8A80</color> <!-- Soft accent -->
+    <color name="accent_red_700">#D32F2F</color> <!-- Strong accent -->
+    <color name="main_color">#FE0000</color>     <!-- Main brand color -->
+
+    <color name="button_pressed">#CC0000</color>     <!-- Darker red when pressed -->
+    <color name="button_focused">#FF3333</color>     <!-- Slightly lighter red on hover -->
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="ultra_dark_gray">#212121</color>
+    <color name="darker_shade">#424242</color>
+    <color name="dark_gray">#757575</color> <!-- Search icon color -->
+    <color name="slightly_gray">#979797</color>
+    <color name="gray">#BDBDBD</color> <!-- Hint text color -->
+</resources>

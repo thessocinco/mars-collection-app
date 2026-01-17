@@ -1,0 +1,17 @@
+<resources>
+    <string name="AppName">MarsCAPP</string>
+
+    <string-array name="salesmanlistarr">
+        <item>Salesman ID</item> <!-- hint -->
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+    </string-array>
+
+    <string-array name="sellingtype">
+        <item>Booking</item>
+        <item>Van-selling</item>
+    </string-array>
+
+</resources>
+

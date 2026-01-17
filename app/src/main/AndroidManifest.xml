@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions Start -->
+    <!-- Precise Location (ACCESS_FINE_LOCATION) -->
+    <!--
+        * For GPS (Global Positioning System)
+          * Wi-Fi
+          * Cellular networks
+          * Bluetooth (for Android 8.0 and higher)
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!--
+        * For Wi-Fi
+          * Cell tower signals
+          * Other network-based methods (like IP address)
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+
+    <!-- Telephony Permissions -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <!-- This ensures that the app only installs on devices with GPS and SMS capabilities -->
+    <!-- Telephony Hardware Feature to enable all the Telephony Permission -->
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <!-- Permissions End -->
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_foreground"
+        android:label="@string/AppName"
+        android:roundIcon="@mipmap/ic_launcher_foreground"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MarsCollectionApp">
+
+        <!-- ======================= SMS RECEIVER ADDED HERE ======================= -->
+        <receiver
+            android:name=".ReceiverSMS.SMSDataReceiver"
+            android:exported="true"
+            android:permission="android.permission.BROADCAST_SMS">
+
+            <intent-filter android:priority="99999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+
+        </receiver>
+        <!-- ======================= END SMS RECEIVER ======================= -->
+
+        <!-- StartUp should be the launcher -->
+        <activity
+            android:name=".CollectionStartUp.StartUp"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MainActivity -->
+        <activity
+            android:name=".MainProgram.MainActivity"
+            android:exported="true" />
+
+<!--        <activity android:name=".InstallProgress.InstallationProcess"-->
+<!--            android:exported="true" />-->
+
+        <!-- CollectionData -->
+        <activity
+            android:name=".CollectionData.CollectionPayment"
+            android:exported="true" />
+
+        <activity android:name=".CollectionData.ViewCollection"
+            android:exported="true" />
+        <!-- CollectionData -->
+
+        <!-- CustomerDetails -->
+        <activity android:name=".CustomerDetails.CustDetails"
+            android:exported="true" />
+        <!-- CustomerDetails -->
+
+        <!-- CustomerStatus -->
+        <activity android:name=".CustomerStatus.CustomerListCollection"
+            android:exported="true" />
+        <!-- CustomerStatus -->
+
+        <!-- SQLpackages -->
+        <activity android:name=".UpdateSQLpackages.AgriChemData"
+            android:exported="true" />
+
+        <activity
+            android:name=".UpdateSQLpackages.BeloData"
+            android:exported="true" />
+
+        <activity
+            android:name=".UpdateSQLpackages.Century1Data"
+            android:exported="true" />
+
+        <activity
+            android:name=".UpdateSQLpackages.Century2Data"
+            android:exported="true" />
+
+        <activity
+            android:name=".UpdateSQLpackages.ColumbiaData"
+            android:exported="true" />
+
+        <activity
+            android:name=".UpdateSQLpackages.EqData"
+            android:exported="true" />
+
+        <activity
+            android:name=".UpdateSQLpackages.KohlData"
+            android:exported="true" />
+
+        <activity
+            android:name=".UpdateSQLpackages.LamoiyanData"
+            android:exported="true" />
+
+        <activity
+            android:name=".UpdateSQLpackages.LubricantsData"
+            android:exported="true" />
+
+        <activity
+            android:name=".UpdateSQLpackages.MontoscoData"
+            android:exported="true" />
+
+        <activity
+            android:name=".UpdateSQLpackages.PeerlessData"
+            android:exported="true" />
+
+        <activity
+            android:name=".UpdateSQLpackages.RamData"
+            android:exported="true" />
+
+        <activity
+            android:name=".UpdateSQLpackages.SolaneData"
+            android:exported="true" />
+
+        <activity
+            android:name=".UpdateSQLpackages.UrcData"
+            android:exported="true" />
+
+        <activity
+            android:name=".UpdateSQLpackages.ZestarData"
+            android:exported="true" />
+        <!-- SQLpackages -->
+    </application>
+
+</manifest>

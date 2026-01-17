@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="50dp"
+    android:background="@color/white">
+
+    <!--  MAVCI logo  -->
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="MAVCI LOGO"
+        android:src="@mipmap/ic_launcher_foreground" />
+
+    <!--  Company name  -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Mars Agri Ventures &amp; Commodities Incorporated"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!--  version.text  -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="verion 2.0.2.5"
+        android:textStyle="italic"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="50dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
+        android:max="100"
+        android:progress="0"
+        android:progressTint="@color/main_color" />
+
+    <TextView
+        android:id="@+id/progressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preparing installation..."
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp" />
+</LinearLayout>

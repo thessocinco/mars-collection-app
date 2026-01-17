@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    tools:context=".MainProgram.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/maintoolbar" />
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:scrollbars="none"
+            tools:ignore="NestedScrolling">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:isScrollContainer="true"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbars="vertical"
+                android:stretchColumns="1"
+                tools:ignore="ScrollViewSize">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="1"
+                    android:alignmentMode="alignMargins"
+                    android:useDefaultMargins="true">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_row="0"
+                        android:textStyle="bold"
+                        android:text="CUSTOMER QUERY"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <Button
+                        android:id="@+id/btnClearSearch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:text="Clear Details"
+                        android:textSize="14sp"
+                        android:background="@drawable/button_bg"
+                        android:textColor="@android:color/white"
+                        android:stateListAnimator="@null" />
+                </GridLayout>
+
+                <!-- Search Customer Name -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:hint="Search Customer Name . . ."
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/mainCustomerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:padding="8dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+<!--                &lt;!&ndash; Select Customers &ndash;&gt;-->
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:hint="Select Customers"-->
+<!--                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">-->
+
+<!--                    <AutoCompleteTextView-->
+<!--                        android:id="@+id/mainCustomerList"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:inputType="none" />-->
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+                <!-- Distance Between Customer -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="CUSTOMER DISTANCE"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:hint="Registered Customer Location"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/mainCustomerDistance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:focusable="false"
+                        android:cursorVisible="false"
+                        android:clickable="false"
+                        android:longClickable="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Customer Code -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:hint="Registered Customer Code"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/mainCustomerCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:focusable="false"
+                        android:cursorVisible="false"
+                        android:clickable="false"
+                        android:longClickable="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Customer Address -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:hint="Registered Customer Address"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/mainCustomerAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:focusable="false"
+                        android:cursorVisible="false"
+                        android:clickable="false"
+                        android:longClickable="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Buttons -->
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    app:columnCount="2">
+
+                    <!-- View on Map -->
+                    <Button
+                        android:id="@+id/btnViewOnMap"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/button_bg"
+                        android:textColor="@android:color/white"
+                        android:layout_marginEnd="2.5dp"
+                        android:text="View on Map"
+                        app:layout_columnWeight="1"
+                        tools:ignore="HardcodedText" />
+
+                    <!-- Get my Location -->
+                    <Button
+                        android:id="@+id/btnGetLocation"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="2.5dp"
+                        android:background="@drawable/button_bg"
+                        android:text="Get My Location"
+                        android:textColor="@android:color/white"
+                        app:layout_column="1"
+                        app:layout_columnWeight="1"
+                        app:layout_row="0"
+                        tools:ignore="HardcodedText" />
+                </androidx.gridlayout.widget.GridLayout>
+
+                <!-- Customer Status -->
+                <Button
+                    android:id="@+id/btnCustomerStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:textAlignment="center"
+                    android:text="Customer Status"
+                    android:background="@drawable/button_bg"
+                    android:textColor="@android:color/white"
+                    android:elevation="2dp"
+                    android:stateListAnimator="@null"
+                    android:padding="12dp"
+                    android:textSize="16sp"/>
+
+
+                <!-- Add Collection -->
+                <Button
+                    android:id="@+id/btnCollectPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:textAlignment="center"
+                    android:text="Collect Payment"
+                    android:background="@drawable/button_bg"
+                    android:textColor="@android:color/white"
+                    android:elevation="2dp"
+                    android:stateListAnimator="@null"
+                    android:padding="12dp"
+                    android:textSize="16sp"/>
+
+                <!-- View Collection -->
+                <Button
+                    android:id="@+id/btnViewCollection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:textAlignment="center"
+                    android:text="View Collection"
+                    android:background="@drawable/button_bg"
+                    android:textColor="@android:color/white"
+                    android:elevation="2dp"
+                    android:stateListAnimator="@null"
+                    android:padding="12dp"
+                    android:textSize="16sp"/>
+
+                <!-- Customer Details -->
+                <Button
+                    android:id="@+id/btnCustomerDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:textAlignment="center"
+                    android:text="Customer Details"
+                    android:background="@drawable/button_bg"
+                    android:textColor="@android:color/white"
+                    android:elevation="2dp"
+                    android:stateListAnimator="@null"
+                    android:padding="12dp"
+                    android:textSize="16sp"/>
+
+                <!-- Send Reason -->
+<!--                <Button-->
+<!--                    android:id="@+id/btnSendReason"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:text="Send Reason"-->
+<!--                    android:background="@drawable/button_bg"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:elevation="2dp"-->
+<!--                    android:stateListAnimator="@null"-->
+<!--                    android:padding="12dp"-->
+<!--                    android:textSize="16sp"/>-->
+
+                <!-- View Customer Details -->
+<!--                <Button-->
+<!--                    android:id="@+id/btnCustomerDetails"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:text="Customer Details"-->
+<!--                    android:background="@drawable/button_bg"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:elevation="2dp"-->
+<!--                    android:stateListAnimator="@null"-->
+<!--                    android:padding="12dp"-->
+<!--                    android:textSize="16sp"/>-->
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

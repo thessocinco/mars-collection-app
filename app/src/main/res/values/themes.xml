@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MarsCollectionApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+                <!-- Primary brand color (main red). -->
+
+                <item name="colorPrimary">@color/red_500</item>
+                <item name="colorPrimaryVariant">@color/red_700</item>
+                <item name="colorOnPrimary">@color/white</item>
+
+                <!-- Secondary brand color (accent red). -->
+                <item name="colorSecondary">@color/accent_red_200</item>
+                <item name="colorSecondaryVariant">@color/accent_red_700</item>
+                <item name="colorOnSecondary">@color/black</item>
+
+                <!-- Status bar color. -->
+                <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+                <!-- Customize your theme here. -->
+    </style>
+    <style name="Theme.MarsCollectionApp" parent="Base.Theme.MarsCollectionApp" />
+</resources>

@@ -18,7 +18,7 @@
 ---
 
 ## Purpose
-Manages small and large collection transactions and supports daily field operations.
+Manages small and large collection transactions and supports daily field operations
 
 ---
 
